@@ -1,11 +1,9 @@
+@import '../styles/common.scss';
+
 .container {
     max-width: 60rem;
     margin: 3rem auto 0;
     font-family: sans-serif;
-
-    h1 {
-        color: #333;
-    }
 
     p {
         color: #aaa;
@@ -13,4 +11,9 @@
 }
 
 .title {
+    font-size: $font-size-6;
+}
+
+.foo {
+    color: black;
 }
