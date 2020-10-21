@@ -1,19 +1,6 @@
 @import '../styles/common.scss';
 
-.container {
-    max-width: 60rem;
-    margin: 3rem auto 0;
-    font-family: sans-serif;
-
-    p {
-        color: #aaa;
-    }
-}
-
-.title {
-    font-size: $font-size-6;
-}
-
-.foo {
-    color: black;
+.page {
+    min-height: 100vh;
+    background: $color-white;
 }
