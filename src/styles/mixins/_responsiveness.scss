@@ -1,0 +1,71 @@
+// Minimum breakpoint width. Null for the smallest (first) breakpoint.
+@function breakpoint-min($name) {
+    @if type-of($name) == 'number' and unit($name) == 'px' {
+        @return $name;
+    } @else {
+        $min: map-get($breakpoints, $name);
+        @return if($min !=0, $min, null);
+    }
+}
+
+// Media of at least the minimum breakpoint width. No query for the smallest breakpoint.
+// Makes the @content apply to the given breakpoint and wider.
+@mixin media-breakpoint-up($name) {
+    $min: breakpoint-min($name);
+
+    @if $min {
+        @media (min-width: $min) {
+            @content;
+        }
+    } @else {
+        @content;
+    }
+}
+
+@mixin media-breakpoint-down($name) {
+    $min: breakpoint-min($name);
+
+    @if $min {
+        @media (max-width: $min - 1px) {
+            @content;
+        }
+    } @else {
+        @content;
+    }
+}
+
+@mixin media-breakpoint-between($from, $to) {
+    $min: breakpoint-min($from);
+    $max: breakpoint-min($to)- 1px;
+
+    @if $min {
+        @media (min-width: $min) and (max-width: $max) {
+            @content;
+        }
+    } @else {
+        @content;
+    }
+}
+
+@function vw($size, $breakpoint) {
+    @return relative-to-breakpoint($size, $breakpoint, 1vw);
+}
+
+@function vh($size, $breakpoint) {
+    @return relative-to-breakpoint($size, $breakpoint, 1vh);
+}
+
+@function relative-to-breakpoint($size, $breakpoint, $unit) {
+    $breakpointValue: map-get($breakpoints, $breakpoint);
+    $context: $breakpointValue * 0.01;
+
+    @if $breakpointValue {
+        @if $context != 0 {
+            @return ($size / $context) * $unit;
+        } @else {
+            @error ("can't divide by zero!");
+        }
+    } @else {
+        @error ('Unknown breakpoint name!');
+    }
+}
