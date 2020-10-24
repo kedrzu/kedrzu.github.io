@@ -29,6 +29,7 @@
         "eslint-config-prettier": "~6.13.0",
         "eslint-plugin-import": "~2.22.1",
         "eslint-plugin-prefer-arrow": "~1.2.2",
+        "gatsby-plugin-react-svg": "^3.0.0",
         "gatsby-plugin-root-import": "^2.0.5",
         "gatsby-plugin-sass-resources": "~2.0.0",
         "typescript-plugin-css-modules": "~2.7.0"

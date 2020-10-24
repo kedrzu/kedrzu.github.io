@@ -1,0 +1,31 @@
+@import '../styles/common.scss';
+
+.skill {
+    border: 3px solid $color-black;
+    margin-top: $spacing-3;
+    margin-right: $spacing-3;
+    display: flex;
+    height: 45px;
+    box-sizing: content-box;
+    display: flex;
+    flex-direction: column;
+    padding: 0 $spacing-4;
+    justify-content: center;
+}
+
+.text {
+    font-size: $font-size-4;
+    line-height: 1;
+}
+
+.points {
+    display: flex;
+    font-size: 10px;
+    color: $color-red;
+    line-height: 1;
+}
+
+.point {
+    width: 8px;
+    height: 8px;
+}
