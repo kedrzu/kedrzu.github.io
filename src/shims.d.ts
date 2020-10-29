@@ -4,6 +4,11 @@ declare module '*.module.scss' {
 }
 
 declare module '*.svg' {
-    const svg: typeof React.Component;
-    export default svg;
+    const path: string;
+    export default path;
+}
+
+declare module '*.png' {
+    const path: string;
+    export default path;
 }

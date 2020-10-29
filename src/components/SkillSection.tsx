@@ -1,13 +1,32 @@
 import * as React from 'react';
 
-import styles from './Skills.module.scss';
+import styles from './SkillSection.module.scss';
 import { Skill } from './Skill';
 
-export class Skills extends React.Component {
+export class SkillSection extends React.Component {
+    private element = React.createRef<HTMLElement>();
+    private pinned = false;
+
+    componentDidMount() {
+        this.check();
+        // window.addEventListener('scroll', this.onScroll.bind(this), { passive: true });
+        window.addEventListener('resize', this.check.bind(this), { passive: true });
+    }
+
+    private check() {
+        const element = this.element.current;
+        if (!element) {
+            return;
+        }
+
+        element.style.position = 'sticky';
+        element.style.top = `${window.innerHeight - element.offsetHeight}px`;
+    }
+
     public render() {
         return (
-            <section className={styles.section}>
-                <h2 className={styles.title}>My skills</h2>
+            <section className={styles.section} ref={this.element}>
+                <h2 className={styles.title}>Skills</h2>
 
                 <div className={styles.grid}>
                     <div className={styles.skillsOuter}>
@@ -35,7 +54,7 @@ export class Skills extends React.Component {
                             <Skill skill={4}>ASP.NET Web API</Skill>
                             <Skill skill={4}>ASP.NET Core</Skill>
                             <Skill skill={4}>OData</Skill>
-                            <Skill skill={2}>SQL Server</Skill>
+                            <Skill skill={3}>SQL Server</Skill>
                             <Skill skill={1}>MySQL</Skill>
                             <Skill skill={1}>PostgreSQL</Skill>
                         </div>
@@ -63,7 +82,9 @@ export class Skills extends React.Component {
                             <Skill>Visual Studio Code</Skill>
                             <Skill>Kibana</Skill>
                             <Skill>Sentry</Skill>
+                            <Skill>TSLint</Skill>
                             <Skill>ESLint</Skill>
+                            <Skill>StyleLint</Skill>
                         </div>
                     </div>
                 </div>

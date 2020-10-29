@@ -1,0 +1,83 @@
+@import '../styles/common.scss';
+
+.section {
+    min-height: 1000px;
+    position: relative;
+    color: $color-white;
+    background: $color-blue-3;
+    z-index: 1;
+
+    @include media-breakpoint-up(lg) {
+        padding: vw($spacing-10, xl);
+    }
+}
+
+.title {
+    @include font-title;
+    flex: 0 0 100%;
+    margin-bottom: $spacing-2;
+    font-size: $font-size-9;
+    padding: $spacing-6 $spacing-6 0;
+    position: sticky;
+    top: 0;
+
+    @include media-breakpoint-up(lg) {
+        font-size: vw($font-size-8, lg);
+        padding: 0 vw($spacing-6, lg);
+        top: vw($spacing-10, xl);
+    }
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    background: $color-blue-3;
+    z-index: 1;
+    position: relative;
+    margin-top: $spacing-11;
+}
+
+.experience {
+    display: flex;
+    min-height: 500px;
+
+    &:not(:first-child) {
+        margin-top: $spacing-10;
+    }
+}
+
+.logo {
+    display: flex;
+    flex: 0 0 50%;
+    background: $color-blue-1;
+    align-items: center;
+    justify-content: center;
+
+    &_healthlabs {
+        background: linear-gradient(0, rgba($color-white, 0.3), rgba($color-white, 0.3)),
+            url(../assets/healthlabs-background.png);
+        background-size: cover;
+        background-position: center;
+    }
+
+    &_perfectgym {
+        background: linear-gradient(0, rgba($color-white, 0.3), rgba($color-white, 0.3)),
+            url(../assets/perfectgym-background.png);
+        background-size: cover;
+        background-position: center;
+    }
+
+    img {
+        height: 80px;
+        width: auto;
+        padding: $spacing-6;
+        background: $color-white;
+        box-shadow: 0 1px 6px rgba($color-black, 0.05), 0 2px 12px rgba($color-black, 0.05);
+    }
+}
+
+.content {
+    display: flex;
+    flex: 0 0 50%;
+    background: $color-white;
+}

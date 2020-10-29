@@ -1,7 +1,7 @@
 @import '../styles/common.scss';
 
 .skill {
-    border: 3px solid $color-black;
+    border: 3px solid $color-blue-1;
     margin-top: $spacing-3;
     margin-right: $spacing-3;
     display: flex;
@@ -9,7 +9,7 @@
     box-sizing: content-box;
     display: flex;
     flex-direction: column;
-    padding: 0 $spacing-4;
+    padding: 0 $spacing-3;
     justify-content: center;
 }
 
