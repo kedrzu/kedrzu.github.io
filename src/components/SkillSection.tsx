@@ -20,7 +20,10 @@ export class SkillSection extends React.Component {
         }
 
         element.style.position = 'sticky';
-        element.style.top = `${window.innerHeight - element.offsetHeight}px`;
+
+        const top = element.offsetHeight - 100;
+
+        element.style.top = `calc(100vh - ${top}px)`;
     }
 
     public render() {
@@ -40,6 +43,8 @@ export class SkillSection extends React.Component {
                             <Skill skill={4}>CSS / SCSS / LESS</Skill>
                             <Skill skill={4}>Webpack</Skill>
                             <Skill skill={4}>NuxtJS</Skill>
+                            <Skill skill={3}>UX design</Skill>
+                            <Skill skill={2}>UI design</Skill>
                             <Skill skill={2}>GraphQL</Skill>
                             <Skill skill={1}>React</Skill>
                         </div>

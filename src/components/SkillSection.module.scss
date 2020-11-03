@@ -1,16 +1,19 @@
 @import '../styles/common.scss';
 
 .section {
+    $safe-margin: 100px;
+
     background: $color-white;
     position: relative;
     top: 0;
-    min-height: 100vh;
+    min-height: calc(100vh + #{$safe-margin});
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    padding-bottom: $safe-margin;
 
     @include media-breakpoint-up(lg) {
-        padding: $spacing-7 vw($spacing-10, xl);
+        padding: $spacing-7 vw($spacing-10, xl) #{$spacing-7 + $safe-margin};
     }
 }
 

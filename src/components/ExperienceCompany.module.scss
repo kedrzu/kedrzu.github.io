@@ -1,0 +1,143 @@
+@import '../styles/common.scss';
+
+.company {
+    background: $color-white;
+    padding: $spacing-6 $spacing-4;
+    color: $color-black;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: $spacing-8;
+
+    @include media-breakpoint-up(md) {
+        padding: $spacing-6;
+    }
+
+    @include media-breakpoint-up(lg) {
+        padding: $spacing-8;
+        margin-bottom: $spacing-10;
+    }
+
+    @media print {
+        margin-bottom: $spacing-6;
+        padding: 0;
+    }
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: $spacing-6;
+    margin-bottom: $spacing-5;
+    border-bottom: 2px solid $color-black;
+    flex: 0 0 auto;
+
+    @include media-breakpoint-up(md) {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    @media print {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 0;
+        padding-top: $spacing-6;
+        border-bottom: none;
+        border-top: 2px solid $color-black;
+    }
+}
+
+.logo {
+    height: 40px;
+    width: auto;
+    margin-right: auto;
+
+    @media print {
+        height: 30px;
+    }
+}
+
+.name {
+    font-size: $font-size-7;
+    color: $color-blue-2;
+    @include font-title;
+
+    @media print {
+        font-size: $font-size-5;
+    }
+}
+
+.contacts {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-left: -1 * $spacing-3;
+    margin-top: $spacing-2;
+
+    @include media-breakpoint-up(md) {
+        margin-top: 0;
+    }
+
+    @media print {
+        margin-top: 0;
+    }
+
+    &_spacer {
+        @include media-breakpoint-down(md) {
+            flex: 0 0 100%;
+        }
+
+        @media print {
+            flex: 0 0 100%;
+        }
+    }
+
+    &_contact {
+        margin-left: $spacing-3;
+        margin-top: $spacing-3;
+        border: 1px solid $color-blue-3;
+        padding: $spacing-2;
+        font-size: $font-size-2;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        font-family: monospace;
+        color: $color-red;
+        flex: 0 0 auto;
+
+        &:hover {
+            background: $color-red-10;
+        }
+
+        &_icon {
+            width: 20px;
+            height: 20px;
+        }
+
+        @include media-breakpoint-up(md) {
+            margin-top: 0;
+        }
+
+        @media print {
+            margin-top: 0;
+            border: none;
+        }
+    }
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    max-width: 700px;
+
+    @media print {
+        max-width: none;
+    }
+}
+
+.noprint {
+    @media print {
+        display: none;
+    }
+}
