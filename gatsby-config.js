@@ -9,5 +9,6 @@ module.exports = {
                 resources: ['./src/styles/common.scss'],
             },
         },
+        'gatsby-plugin-output',
     ],
 };
