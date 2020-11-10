@@ -17,7 +17,6 @@
         color: $color-black;
         background: none;
         padding: 0;
-        page-break-before: always;
     }
 
     &_title {
@@ -38,7 +37,10 @@
         @media print {
             font-size: $font-size-6;
             padding: 0;
+            padding-bottom: $spacing-2;
             position: static;
+            border-bottom: 1px solid $color-black;
+            margin-top: $spacing-7;
         }
     }
 }
@@ -50,14 +52,20 @@
     z-index: 1;
     position: relative;
     margin-top: $spacing-6;
+    margin-bottom: $spacing-6;
 
     @include media-breakpoint-up(lg) {
         margin-top: $spacing-10;
+        margin-bottom: $spacing-10;
+    }
+
+    &:last-child {
+        margin-bottom: 0 !important;
     }
 
     @media print {
         background: $color-white;
-        margin-top: $spacing-6;
+        margin-top: 0;
     }
 }
 
@@ -78,84 +86,102 @@
     // }
 }
 
-.title {
-    @include font-title;
-    font-size: $font-size-6;
-    color: $color-blue-3;
-    padding-right: $spacing-3;
-
-    @media print {
-        font-size: $font-size-4;
-    }
-}
-
-.subtitle {
-    @include font-title;
-    font-size: $font-size-4;
-    color: $color-gray-2;
-
-    @media print {
-        font-size: $font-size-3;
-    }
-}
-
-.bullets {
-    list-style: none;
-    padding: 0;
-    margin: $spacing-3 0;
-    font-size: $font-size-3;
-
-    @media print {
-        font-size: $font-size-2;
-        margin-bottom: 0;
-    }
-
-    > li {
-        padding-left: $spacing-5;
-        position: relative;
-        line-height: 1.5;
-        margin: 0 0 $spacing-1;
-
-        &:before {
-            content: '✱';
-            color: $color-red;
-            position: absolute;
-            left: 0;
-        }
-    }
-
-    em {
-        color: $color-gray-3;
-        font-size: $font-size-2;
-        font-style: normal;
-        display: block;
-
-        @media print {
-            font-size: $font-size-1;
-        }
-    }
-}
-
-.techs {
+.position {
+    page-break-inside: avoid;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
 
-    &_item {
-        border: 2px solid $color-blue-1;
-        margin-top: $spacing-3;
-        margin-right: $spacing-3;
-        line-height: 30px;
-        padding: 0 $spacing-2;
-        font-size: $font-size-2;
+    + .position {
+        margin-top: $spacing-2;
+    }
+
+    &_title {
+        @include font-title;
+        font-size: $font-size-6;
+        color: $color-blue-3;
+        padding-right: $spacing-3;
 
         @media print {
-            line-height: 25px;
-            padding: 0 $spacing-2;
-            border-width: 1px;
+            font-size: $font-size-4;
         }
     }
 
+    &_subtitle {
+        @include font-title;
+        font-size: $font-size-4;
+        color: $color-gray-2;
+
+        @media print {
+            font-size: $font-size-3;
+        }
+    }
+
+    &_bullets {
+        list-style: none;
+        padding: 0;
+        margin: $spacing-3 0;
+        font-size: $font-size-3;
+
+        @media print {
+            font-size: $font-size-2;
+            margin-bottom: 0;
+        }
+
+        > li {
+            padding-left: $spacing-5;
+            position: relative;
+            line-height: 1.5;
+            margin: 0 0 $spacing-1;
+
+            &:before {
+                content: '✱';
+                color: $color-red;
+                position: absolute;
+                left: 0;
+            }
+        }
+
+        em {
+            color: $color-gray-3;
+            font-size: $font-size-2;
+            font-style: normal;
+            display: block;
+
+            @media print {
+                font-size: $font-size-1;
+            }
+        }
+    }
+
+    &_techs {
+        display: flex;
+        flex-wrap: wrap;
+
+        &_item {
+            border: 2px solid $color-blue-1;
+            margin-top: $spacing-3;
+            margin-right: $spacing-3;
+            line-height: 30px;
+            padding: 0 $spacing-2;
+            font-size: $font-size-2;
+
+            @media print {
+                line-height: 25px;
+                padding: 0 $spacing-2;
+                border-width: 1px;
+            }
+        }
+
+        @media print {
+            page-break-inside: avoid;
+        }
+    }
+}
+
+.printSpacer {
+    display: none;
     @media print {
-        page-break-inside: avoid;
+        display: block;
+        flex: 0 0 10px;
     }
 }

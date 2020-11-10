@@ -31,6 +31,9 @@
     @media print {
         font-size: $font-size-6;
         padding: 0;
+        color: $color-black;
+        padding-bottom: $spacing-2;
+        border-bottom: 1px solid $color-black;
     }
 }
 
@@ -49,6 +52,7 @@
         font-size: $font-size-4;
         padding: 0;
         margin: 0;
+        color: $color-blue-3;
     }
 }
 
@@ -58,6 +62,7 @@
 
     @include media-breakpoint-up(lg) {
         padding: vw($spacing-6, lg);
+
         &:not(:last-child) {
             flex: 0 0 50%;
         }
@@ -67,7 +72,10 @@
         flex: 0 0 100%;
         font-size: $font-size-5;
         padding: 0;
-        margin-bottom: $spacing-7;
+
+        &:not(:last-child) {
+            margin-bottom: $spacing-7;
+        }
     }
 }
 

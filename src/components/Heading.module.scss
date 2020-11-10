@@ -14,8 +14,7 @@
     justify-content: center;
 
     @media print {
-        height: auto;
-        position: static;
+        display: none;
     }
 }
 
