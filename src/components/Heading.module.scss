@@ -23,6 +23,10 @@
     width: 80%;
     margin: 0 auto;
     padding: $spacing-7;
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
     @include font-title;
 
@@ -62,5 +66,31 @@
         background-clip: text;
         -webkit-background-clip: text;
         color: transparent;
+    }
+}
+
+.chevron {
+    width: 60px;
+    filter: invert(1);
+    animation: shake 1.5s ease-in-out;
+    animation-iteration-count: infinite;
+    margin: 2vh 0 15vh;
+    opacity: 0;
+    transition: opacity 0.8s ease-out;
+
+    &_show {
+        opacity: 1;
+    }
+}
+
+@keyframes shake {
+    from {
+        transform: none;
+    }
+    50% {
+        transform: translateY(30px);
+    }
+    from {
+        transform: none;
     }
 }

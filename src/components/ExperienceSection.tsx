@@ -172,7 +172,7 @@ export class ExperienceSection extends React.Component {
                         </div>
                     </ExperienceCompany>
 
-                    <ExperienceCompany name="Eurotronic Sp. z o.o.">
+                    <ExperienceCompany name="Eurotronic" url="eurotronic.net.pl">
                         <h3 className={styles.title}>.NET developer</h3>
                         <p>October 2013 — September 2014</p>
 
@@ -187,7 +187,7 @@ export class ExperienceSection extends React.Component {
                         </div>
                     </ExperienceCompany>
 
-                    <ExperienceCompany name="Emerson Process Management">
+                    <ExperienceCompany name="Emerson Process Management" url="www.emerson.com">
                         <h3 className={styles.title}>.NET developer intern</h3>
                         <p>July 2013 — September 2013</p>
 
