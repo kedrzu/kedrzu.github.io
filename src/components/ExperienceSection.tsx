@@ -31,7 +31,7 @@ export class ExperienceSection extends React.Component {
                             </li>
                             <li>Used NuxtJS for SSR / isomorphic rendering.</li>
                             <li>Written fully in TypeScript with ESLint.</li>
-                            <li>Very performant & responsive.</li>
+                            <li>Very performant, responsive & highly optimized for SEO.</li>
                             <li>All content is statically generated and served through CDN.</li>
                             <li>
                                 Used prismic.io headless CMS for fully customised contentful design.
@@ -43,10 +43,8 @@ export class ExperienceSection extends React.Component {
                                 <br />
                                 critical CSS inlining, code splitting, preloading, lazy hydration.
                             </li>
-                            <li>Highly optimized for SEO.</li>
                         </ul>
 
-                        <h4 className={styles.subtitle}>Techs & tools</h4>
                         <div className={styles.techs}>
                             <span className={styles.techs_item}>VueJS</span>
                             <span className={styles.techs_item}>NuxtJS</span>
@@ -116,8 +114,10 @@ export class ExperienceSection extends React.Component {
                             </li>
                         </ul>
 
-                        <h3 className={styles.title}>Full-stack developer</h3>
-                        <p>October 2015 — September 2017</p>
+                        <div className={styles.header}>
+                            <h3 className={styles.title}>Full-stack developer</h3>
+                            <p>October 2015 — September 2017</p>
+                        </div>
 
                         <ul className={styles.bullets}>
                             <li>
@@ -134,7 +134,6 @@ export class ExperienceSection extends React.Component {
                             </li>
                         </ul>
 
-                        <h4 className={styles.subtitle}>Techs & tools</h4>
                         <div className={styles.techs}>
                             <span className={styles.techs_item}>C#</span>
                             <span className={styles.techs_item}>ASP.NET MVC</span>
@@ -161,11 +160,9 @@ export class ExperienceSection extends React.Component {
 
                         <ul className={styles.bullets}>
                             <li>Developing an industrial light management system.</li>
-                            <li>Backend built as standalone C# server.</li>
-                            <li>Frontend built with WPF.</li>
+                            <li>Standalone C# server with WPF client.</li>
                         </ul>
 
-                        <h4 className={styles.subtitle}>Techs</h4>
                         <div className={styles.techs}>
                             <span className={styles.techs_item}>C#</span>
                             <span className={styles.techs_item}>WPF</span>
@@ -184,7 +181,6 @@ export class ExperienceSection extends React.Component {
                             <li>Building application for media usage prediction.</li>
                         </ul>
 
-                        <h4 className={styles.subtitle}>Techs </h4>
                         <div className={styles.techs}>
                             <span className={styles.techs_item}>C#</span>
                             <span className={styles.techs_item}>WPF</span>
@@ -199,7 +195,6 @@ export class ExperienceSection extends React.Component {
                             <li>Building web-based reporting system for power plants.</li>
                         </ul>
 
-                        <h4 className={styles.subtitle}>Techs </h4>
                         <div className={styles.techs}>
                             <span className={styles.techs_item}>C#</span>
                             <span className={styles.techs_item}>ASP.NET MVC</span>

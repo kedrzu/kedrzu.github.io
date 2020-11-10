@@ -15,6 +15,12 @@
     @include media-breakpoint-up(lg) {
         padding: $spacing-7 vw($spacing-10, xl) #{$spacing-7 + $safe-margin};
     }
+
+    @media print {
+        position: relative !important;
+        min-height: unset !important;
+        padding: 0;
+    }
 }
 
 .title {
@@ -29,6 +35,11 @@
         font-size: vw($font-size-8, lg);
         padding: 0 vw($spacing-6, lg);
     }
+
+    @media print {
+        font-size: $font-size-6;
+        padding: 0;
+    }
 }
 
 .grid {
@@ -41,22 +52,34 @@
     font-size: $font-size-8;
     flex: 0 0 100%;
     margin-bottom: $spacing-2;
+
+    @media print {
+        font-size: $font-size-4;
+        padding: 0;
+        margin: 0;
+    }
 }
 
 .skillsOuter {
     flex: 0 0 100%;
+    padding: $spacing-6;
 
     @include media-breakpoint-up(lg) {
-        flex: 0 0 50%;
+        padding: vw($spacing-6, lg);
+        &:not(:last-child) {
+            flex: 0 0 50%;
+        }
+    }
+
+    @media print {
+        flex: 0 0 100%;
+        font-size: $font-size-5;
+        padding: 0;
+        margin-bottom: $spacing-7;
     }
 }
 
 .skillsInner {
     display: flex;
     flex-wrap: wrap;
-    padding: $spacing-6;
-
-    @include media-breakpoint-up(lg) {
-        padding: vw($spacing-6, lg);
-    }
 }

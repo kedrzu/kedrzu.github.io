@@ -20,6 +20,8 @@
     @media print {
         margin-bottom: $spacing-6;
         padding: 0;
+        page-break-inside: avoid;
+        background: none;
     }
 }
 
@@ -45,6 +47,7 @@
         padding-top: $spacing-6;
         border-bottom: none;
         border-top: 2px solid $color-black;
+        page-break-inside: avoid;
     }
 }
 

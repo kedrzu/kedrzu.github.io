@@ -40,7 +40,9 @@ export class SkillSection extends React.Component {
                             <Skill skill={4}>TypeScript</Skill>
                             <Skill skill={4}>VueJS (2 - 3)</Skill>
                             <Skill skill={4}>AngularJS</Skill>
-                            <Skill skill={4}>CSS / SCSS / LESS</Skill>
+                            <Skill skill={4}>CSS</Skill>
+                            <Skill skill={4}>SCSS</Skill>
+                            <Skill skill={4}>LESS</Skill>
                             <Skill skill={4}>Webpack</Skill>
                             <Skill skill={4}>NuxtJS</Skill>
                             <Skill skill={3}>UX design</Skill>
@@ -67,20 +69,12 @@ export class SkillSection extends React.Component {
 
                     <div className={styles.skillsOuter}>
                         <div className={styles.skillsInner}>
-                            <h3 className={styles.skillsTitle}>Infrastructure</h3>
+                            <h3 className={styles.skillsTitle}>Tools & infrastructure</h3>
 
                             <Skill>IIS</Skill>
                             <Skill>AWS</Skill>
                             <Skill>CDN</Skill>
                             <Skill>Git</Skill>
-                            <Skill>CI/CD</Skill>
-                        </div>
-                    </div>
-
-                    <div className={styles.skillsOuter}>
-                        <div className={styles.skillsInner}>
-                            <h3 className={styles.skillsTitle}>Tools</h3>
-
                             <Skill>JIRA</Skill>
                             <Skill>GitHub</Skill>
                             <Skill>Visual Studio</Skill>

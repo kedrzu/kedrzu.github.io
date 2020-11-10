@@ -7,17 +7,19 @@
     z-index: 1;
     padding: $spacing-4;
 
-    @media print {
-        color: $color-black;
-        background: $color-white;
-    }
-
     @include media-breakpoint-up(md) {
         padding: $spacing-6;
     }
 
     @include media-breakpoint-up(lg) {
         padding: vw($spacing-10, xl);
+    }
+
+    @media print {
+        color: $color-black;
+        background: none;
+        padding: 0;
+        page-break-before: always;
     }
 
     &_title {
@@ -32,6 +34,12 @@
             font-size: vw($font-size-8, lg);
             padding: 0 vw($spacing-6, lg);
             top: vw($spacing-10, xl);
+        }
+
+        @media print {
+            font-size: $font-size-6;
+            padding: 0;
+            position: static;
         }
     }
 }
@@ -50,13 +58,32 @@
 
     @media print {
         background: $color-white;
+        margin-top: $spacing-6;
     }
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+
+    // @include media-breakpoint-up(lg) {
+    //     flex-direction: row;
+    //     justify-content: space-between;
+    //     align-items: center;
+    // }
+
+    // @media print {
+    //     flex-direction: row;
+    //     justify-content: space-between;
+    //     align-items: center;
+    // }
 }
 
 .title {
     @include font-title;
     font-size: $font-size-6;
     color: $color-blue-3;
+    padding-right: $spacing-3;
 
     @media print {
         font-size: $font-size-4;
@@ -77,13 +104,18 @@
     list-style: none;
     padding: 0;
     margin: $spacing-3 0;
+    font-size: $font-size-3;
+
+    @media print {
+        font-size: $font-size-2;
+        margin-bottom: 0;
+    }
 
     > li {
         padding-left: $spacing-5;
         position: relative;
-        font-size: $font-size-3;
         line-height: 1.5;
-        margin: 0 0 $spacing-2;
+        margin: 0 0 $spacing-1;
 
         &:before {
             content: '✱';
@@ -98,6 +130,10 @@
         font-size: $font-size-2;
         font-style: normal;
         display: block;
+
+        @media print {
+            font-size: $font-size-1;
+        }
     }
 }
 
@@ -118,5 +154,9 @@
             padding: 0 $spacing-2;
             border-width: 1px;
         }
+    }
+
+    @media print {
+        page-break-inside: avoid;
     }
 }
