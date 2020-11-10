@@ -1,11 +1,9 @@
 @import '../styles/common.scss';
 
 .section {
-    position: relative;
+    padding: $spacing-6 $spacing-3;
     color: $color-white;
     background: $color-blue-3;
-    z-index: 1;
-    padding: $spacing-6 $spacing-3;
 
     @include media-breakpoint-up(md) {
         padding: $spacing-6;

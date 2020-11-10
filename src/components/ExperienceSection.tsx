@@ -5,11 +5,12 @@ import HealthlabsLogo from '../assets/healthlabs-logo.svg';
 
 import { ExperienceCompany } from './ExperienceCompany';
 import styles from './ExperienceSection.module.scss';
+import { Section } from './Section';
 
 export class ExperienceSection extends React.Component {
     public render() {
         return (
-            <section className={styles.section}>
+            <Section className={styles.section}>
                 <h2 className={styles.section_title}>Experience</h2>
 
                 <div className={styles.container}>
@@ -201,7 +202,7 @@ export class ExperienceSection extends React.Component {
                         </div>
                     </ExperienceCompany>
                 </div>
-            </section>
+            </Section>
         );
     }
 }

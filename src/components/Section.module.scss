@@ -1,0 +1,18 @@
+.section {
+    $safe-margin: 10vh;
+
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+    box-shadow: 0 0 5vh rgba(black, 0.2), 0 0 10vh rgba(black, 0.2), 0 0 15vh rgba(black, 0.2);
+
+    &:not(:last-child) {
+        margin-bottom: $safe-margin;
+    }
+
+    @media print {
+        position: relative !important;
+        min-height: unset !important;
+        margin-bottom: $safe-margin;
+    }
+}

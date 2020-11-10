@@ -11,6 +11,7 @@
     flex-direction: column;
     padding: 0 $spacing-3;
     justify-content: center;
+    z-index: 1;
 
     @media print {
         height: 38px;
