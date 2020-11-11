@@ -20,11 +20,12 @@
     @include font-title;
     flex: 0 0 100%;
     margin-bottom: $spacing-2;
-    margin-top: $spacing-9;
+    margin-top: $spacing-6;
     font-size: $font-size-9;
     color: $color-blue-3;
 
     @include media-breakpoint-up(lg) {
+        margin-top: $spacing-9;
         font-size: vw($font-size-8, lg);
     }
 
