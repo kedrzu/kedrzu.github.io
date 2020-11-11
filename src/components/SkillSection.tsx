@@ -3,10 +3,12 @@ import * as React from 'react';
 import styles from './SkillSection.module.scss';
 import { Skill } from './Skill';
 import { Section } from './Section';
+import { Profile } from './Profile';
 
 export const SkillSection: React.FunctionComponent = () => {
     return (
         <Section className={styles.section}>
+            <Profile />
             <h2 className={styles.title}>Skills</h2>
 
             <div className={styles.grid}>

@@ -14,8 +14,8 @@
     z-index: 1;
 
     @media print {
-        height: 38px;
-        padding: 0 $spacing-2;
+        height: auto;
+        padding: $spacing-2;
         border-width: 2px;
         margin-top: $spacing-2;
         margin-right: $spacing-2;

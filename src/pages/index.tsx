@@ -1,6 +1,7 @@
 import * as React from 'react';
 
 import { Heading } from '../components/Heading';
+import { ProfileSection } from '../components/ProfileSection';
 import { SkillSection } from '../components/SkillSection';
 import { ExperienceSection } from '../components/ExperienceSection';
 

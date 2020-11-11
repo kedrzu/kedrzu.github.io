@@ -1,0 +1,163 @@
+@import '../styles/common.scss';
+
+.profile {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: auto 1fr;
+}
+
+.photo {
+    grid-column: 1;
+    grid-row: 1 / span 3;
+
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-right: $spacing-8;
+
+    @media screen {
+        @include media-breakpoint-down(md) {
+            grid-column: 1;
+            grid-row: 1;
+            width: 150px;
+            height: 150px;
+        }
+    }
+
+    @media print {
+        width: 150px;
+        height: 150px;
+        margin-right: $spacing-6;
+    }
+}
+
+.name {
+    grid-column: 2;
+    grid-row: 1;
+
+    @include font-title;
+    margin-bottom: $spacing-2;
+    font-size: $font-size-7;
+    color: $color-blue-3;
+
+    @include media-breakpoint-up(lg) {
+        font-size: vw($font-size-7, lg);
+    }
+
+    @media screen {
+        @include media-breakpoint-down(md) {
+            grid-column: 2;
+            grid-row: 1;
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    @media print {
+        font-size: $font-size-6;
+        color: $color-black;
+        margin-bottom: 0;
+    }
+}
+
+.contacts {
+    grid-column: 2;
+    grid-row: 2;
+
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    @media screen {
+        @include media-breakpoint-down(md) {
+            grid-column: 1 / span 2;
+            grid-row: 2;
+            display: flex;
+            align-items: center;
+            margin-top: $spacing-6;
+        }
+    }
+
+    @media print {
+        margin: 0;
+    }
+
+    &_spacer {
+        @include media-breakpoint-down(md) {
+            flex: 0 0 100%;
+        }
+
+        @media print {
+            flex: 0 0 100%;
+        }
+    }
+
+    &_contact {
+        margin-right: $spacing-3;
+        margin-bottom: $spacing-3;
+        border: 1px solid $color-blue-3;
+        padding: $spacing-2;
+        font-size: $font-size-2;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        font-family: monospace;
+        color: $color-red;
+        flex: 0 0 auto;
+        height: 40px;
+
+        &:hover {
+            background: $color-red-10;
+        }
+
+        &_icon {
+            width: 20px;
+            height: 20px;
+
+            @media print {
+                width: 14px;
+                height: 14px;
+            }
+        }
+
+        @media print {
+            margin-bottom: 0;
+            padding-left: 0;
+            border: none;
+        }
+
+        @media screen {
+            @include media-breakpoint-down(md) {
+                // hide text for everything besides email
+                &:not(:first-child) {
+                    font-size: 0;
+                }
+            }
+        }
+    }
+}
+
+.description {
+    grid-column: 2;
+    grid-row: 3;
+
+    font-size: $font-size-4;
+    line-height: 1.5;
+    max-width: 600px;
+
+    @media screen {
+        @include media-breakpoint-down(md) {
+            grid-column: 1 / span 2;
+            grid-row: 3;
+        }
+    }
+
+    @media print {
+        font-size: $font-size-3;
+        max-width: unset;
+    }
+
+    > p {
+        margin-bottom: $spacing-2;
+    }
+}

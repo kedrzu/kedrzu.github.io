@@ -30,7 +30,6 @@
 
         @include media-breakpoint-up(lg) {
             font-size: vw($font-size-8, lg);
-            padding: 0 vw($spacing-6, lg);
             top: vw($spacing-10, xl);
         }
 
@@ -72,24 +71,17 @@
 .header {
     display: flex;
     flex-direction: column;
-
-    // @include media-breakpoint-up(lg) {
-    //     flex-direction: row;
-    //     justify-content: space-between;
-    //     align-items: center;
-    // }
-
-    // @media print {
-    //     flex-direction: row;
-    //     justify-content: space-between;
-    //     align-items: center;
-    // }
 }
 
 .position {
     page-break-inside: avoid;
     display: flex;
     flex-direction: column;
+    max-width: 700px;
+
+    @media print {
+        max-width: none;
+    }
 
     + .position {
         margin-top: $spacing-2;
@@ -156,6 +148,11 @@
     &_techs {
         display: flex;
         flex-wrap: wrap;
+        max-width: 900px;
+
+        @media print {
+            max-width: none;
+        }
 
         &_item {
             border: 2px solid $color-blue-1;

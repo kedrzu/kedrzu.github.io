@@ -142,11 +142,6 @@
 .content {
     display: flex;
     flex-direction: column;
-    max-width: 700px;
-
-    @media print {
-        max-width: none;
-    }
 }
 
 .noprint {

@@ -5,9 +5,10 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    padding: $spacing-6;
 
     @include media-breakpoint-up(lg) {
-        padding: $spacing-7 vw($spacing-10, xl) $spacing-7;
+        padding: vw($spacing-10, xl);
     }
 
     @media print {
@@ -19,13 +20,12 @@
     @include font-title;
     flex: 0 0 100%;
     margin-bottom: $spacing-2;
+    margin-top: $spacing-9;
     font-size: $font-size-9;
-    padding: $spacing-6 $spacing-6 0;
     color: $color-blue-3;
 
     @include media-breakpoint-up(lg) {
         font-size: vw($font-size-8, lg);
-        padding: 0 vw($spacing-6, lg);
     }
 
     @media print {
@@ -34,6 +34,7 @@
         color: $color-black;
         padding-bottom: $spacing-2;
         border-bottom: 1px solid $color-black;
+        margin-top: 0;
     }
 }
 
@@ -58,10 +59,10 @@
 
 .skillsOuter {
     flex: 0 0 100%;
-    padding: $spacing-6;
+    padding-top: $spacing-7;
 
     @include media-breakpoint-up(lg) {
-        padding: vw($spacing-6, lg);
+        padding: 0 vw($spacing-6, lg) vw($spacing-6, lg) 0;
 
         &:not(:last-child) {
             flex: 0 0 50%;
@@ -74,7 +75,7 @@
         padding: 0;
 
         &:not(:last-child) {
-            margin-bottom: $spacing-7;
+            margin-bottom: $spacing-3;
         }
     }
 }
