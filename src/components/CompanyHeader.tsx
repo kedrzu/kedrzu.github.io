@@ -5,7 +5,7 @@ import GithubIcon from '../assets/icons/github.svg';
 import LinkIcon from '../assets/icons/link.svg';
 import LinkedInIcon from '../assets/icons/linkedin.svg';
 
-import styles from './ExperienceCompany.module.scss';
+import styles from './CompanyHeader.module.scss';
 
 interface Props {
     name: string;
@@ -15,7 +15,7 @@ interface Props {
     linkedin?: string;
 }
 
-export class ExperienceCompany extends React.Component<Props> {
+export class CompanyHeader extends React.Component<Props> {
     public render() {
         let logo: JSX.Element;
         let websiteLink: JSX.Element | undefined;
@@ -43,11 +43,7 @@ export class ExperienceCompany extends React.Component<Props> {
 
         if (this.props.github) {
             githubLink = (
-                <a
-                    className={classNames(styles.contacts_contact, styles.noprint)}
-                    href={this.props.github}
-                    target="_blank"
-                >
+                <a className={styles.contacts_contact} href={this.props.github} target="_blank">
                     <img src={GithubIcon} className={styles.contacts_contact_icon} />
                 </a>
             );
@@ -55,31 +51,24 @@ export class ExperienceCompany extends React.Component<Props> {
 
         if (this.props.linkedin) {
             linkedInLink = (
-                <a
-                    className={classNames(styles.contacts_contact, styles.noprint)}
-                    href={this.props.linkedin}
-                    target="_blank"
-                >
+                <a className={styles.contacts_contact} href={this.props.linkedin} target="_blank">
                     <img src={LinkedInIcon} className={styles.contacts_contact_icon} />
                 </a>
             );
         }
 
         return (
-            <article className={styles.company}>
-                <header className={styles.header}>
-                    {logo}
+            <header className={styles.header}>
+                {logo}
 
-                    <div className={styles.contacts}>
-                        {websiteLink}
-                        <span className={styles.contacts_spacer} />
+                <div className={styles.contacts}>
+                    {websiteLink}
+                    <span className={styles.contacts_spacer} />
 
-                        {githubLink}
-                        {linkedInLink}
-                    </div>
-                </header>
-                <div className={styles.content}>{this.props.children}</div>
-            </article>
+                    {githubLink}
+                    {linkedInLink}
+                </div>
+            </header>
         );
     }
 }

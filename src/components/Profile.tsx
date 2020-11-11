@@ -15,9 +15,9 @@ export const Profile: React.FunctionComponent = () => {
             <h2 className={styles.name}>Michał Kędrzyński</h2>
 
             <div className={styles.contacts}>
-                <a className={styles.contacts_contact} href="mailto:kedrzu@gmail.com">
+                <a className={styles.contacts_contact} href="mailto:m.kedrzynski@gmail.com">
                     <img src={MailIcon} className={styles.contacts_contact_icon} />
-                    &nbsp;kedrzu@gmail.com
+                    &nbsp;m.kedrzynski@gmail.com
                 </a>
                 <a
                     className={styles.contacts_contact}
@@ -44,7 +44,7 @@ export const Profile: React.FunctionComponent = () => {
                     architect of enterprise SaaS solution with worldwide reach.
                 </p>
                 <p>
-                    I'm also obsessed with UX/UI and product design and have a strong experience
+                    I'm also obsessed with UX/UI & product design and have a strong experience
                     working along with designers to deliver holistic solutions.
                 </p>
             </div>

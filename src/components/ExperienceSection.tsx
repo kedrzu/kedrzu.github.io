@@ -2,8 +2,9 @@ import * as React from 'react';
 
 import PerfectGymLogo from '../assets/perfectgym-logo.svg';
 import HealthlabsLogo from '../assets/healthlabs-logo.svg';
+import MailIcon from '../assets/icons/mail.svg';
 
-import { ExperienceCompany } from './ExperienceCompany';
+import { CompanyHeader } from './CompanyHeader';
 import styles from './ExperienceSection.module.scss';
 import { Section } from './Section';
 
@@ -14,38 +15,37 @@ export class ExperienceSection extends React.Component {
                 <h2 className={styles.section_title}>Experience</h2>
 
                 <div className={styles.container}>
-                    <ExperienceCompany
-                        name="HealthLabs"
-                        logo={HealthlabsLogo}
-                        url="healthlabs.pl"
-                        github="https://github.com/4healthlabs"
-                        linkedin="https://www.linkedin.com/company/health-labs-care/"
-                    >
+                    <div className={styles.block}>
+                        <CompanyHeader
+                            name="HealthLabs"
+                            logo={HealthlabsLogo}
+                            url="healthlabs.pl"
+                            github="https://github.com/4healthlabs"
+                            linkedin="https://www.linkedin.com/company/health-labs-care/"
+                        />
                         <div className={styles.position}>
                             <h3 className={styles.position_title}>Front-end lead developer</h3>
-                            <p>April 2020 — now</p>
+                            <h4 className={styles.position_company}>HealthLabs</h4>
+                            <p className={styles.position_time}>April 2020 — now</p>
 
                             <ul className={styles.position_bullets}>
-                                <li>Front-end for popular Polish health supplements brand.</li>
                                 <li>
-                                    Modern VueJS progressive application with headless Magento as a
-                                    backend.
-                                </li>
-                                <li>Used NuxtJS for SSR / isomorphic rendering.</li>
-                                <li>Written fully in TypeScript with ESLint.</li>
-                                <li>Very performant, responsive & highly optimized for SEO.</li>
-                                <li>All content is statically generated and served through CDN.</li>
-                                <li>
-                                    Used prismic.io headless CMS for fully customised contentful
-                                    design.
-                                    <br />
-                                    Application is automatically rebuilt and deployed on any change.
+                                    Lead front-end developer for popular Polish health supplements
+                                    brand.
                                 </li>
                                 <li>
-                                    Applied multiple advanced techniques and optimizations:
-                                    <br />
-                                    critical CSS inlining, code splitting, preloading, lazy
-                                    hydration.
+                                    Modern VueJS progressive ecommerce application with headless
+                                    Magento as a backend.
+                                    <br /> Written from scratch, fully in TypeScript with ESLint.
+                                </li>
+                                <li>
+                                    All content is statically generated and served through CDN. Used
+                                    NuxtJS for SSR / isomorphic rendering.
+                                </li>
+                                <li>
+                                    Very performant, responsive & highly optimized for SEO. Applied
+                                    multiple advanced techniques and optimizations: critical CSS
+                                    inlining, code splitting, preloading, lazy hydration.
                                 </li>
                             </ul>
                         </div>
@@ -68,79 +68,59 @@ export class ExperienceSection extends React.Component {
                             <span className={styles.position_techs_item}>GitHub Actions</span>
                             <span className={styles.position_techs_item}>Sentry.io</span>
                         </div>
-                    </ExperienceCompany>
+                    </div>
 
-                    <ExperienceCompany
-                        name="PerfectGym"
-                        logo={PerfectGymLogo}
-                        url="www.perfectgym.com"
-                        github="https://github.com/PerfectGym"
-                        linkedin="https://www.linkedin.com/company/perfect-gym-solutions-s-a-/"
-                    >
+                    <div className={styles.block}>
+                        <CompanyHeader
+                            name="PerfectGym"
+                            logo={PerfectGymLogo}
+                            url="www.perfectgym.com"
+                            github="https://github.com/PerfectGym"
+                            linkedin="https://www.linkedin.com/company/perfect-gym-solutions-s-a-/"
+                        />
                         <div className={styles.position}>
                             <h3 className={styles.position_title}>
-                                Full-stack developer, team leader & architect
+                                Full-stack developer (later team leader & architect)
                             </h3>
-                            <p>October 2017 — April 2020</p>
+                            <h4 className={styles.position_company}>PerfectGym Solutions</h4>
+                            <p className={styles.position_time}>October 2015 — April 2020</p>
 
                             <ul className={styles.position_bullets}>
                                 <li>
-                                    Working in international team spread across multiple timezones.
-                                    <em>all contintents / up to 10h time difference</em>
+                                    Working in international team (all continents) spread across
+                                    multiple timezones (up to 10h delay).
                                 </li>
                                 <li>
-                                    Built several applications based on VueJS and ASP.NET.
-                                    <em>architecture / development / team leading</em>
+                                    Created internal component library designed to allow backend
+                                    developers to easily create views. <br />
+                                    This allowed for 2 or 3 developers to handle the whole company
+                                    frontend for several years. <br />
+                                    Still powering most of company applications.
                                 </li>
                                 <li>
-                                    Multiple new businness modules, mostly regarding training &
-                                    facility booking.
-                                    <em>
-                                        tech analysis / architecture / development / team leading
-                                    </em>
+                                    Architect of most of the applications currently in use by the
+                                    company, including management app, client portal, internal
+                                    backoffice app, and public API. All of them was rewritten from
+                                    old ones.
+                                </li>
+                                <li>Company's lead front-end developer & architect.</li>
+                                <li>
+                                    Driven the transition to newer technologies & approaches, like
+                                    using VueJS for the frontend, or designing CQS-based API.
                                 </li>
                                 <li>
-                                    New Client Portal application - fully branded white-label
-                                    solution
-                                    <em>architecture / development / team leading</em>
+                                    Architect & lead developer of multiple new businness modules,
+                                    mostly regarding training & facility booking.
                                 </li>
                                 <li>
-                                    New version of public API based on ASP.NET WebAPI and OData
-                                    <em>architecture / development</em>
-                                </li>
-                                <li>
-                                    System-wide infrastructure and architectural reworkings, like
-                                    support for multiple time zones.
-                                    <em>architecture / development / team leading</em>
+                                    Led a long and diffucult migration of the whole system from
+                                    single timezone to multiple timezone support.
                                 </li>
                                 <li>
                                     Deep involvement in tech evangelism, programming practices,
                                     release management & team organization.
-                                </li>
-                                <li>
-                                    Committed to improve overall user experience and design
-                                    consistency of the system.
-                                </li>
-                            </ul>
-                        </div>
-                        <div className={styles.position}>
-                            <div className={styles.header}>
-                                <h3 className={styles.position_title}>Full-stack developer</h3>
-                                <p>October 2015 — September 2017</p>
-                            </div>
-
-                            <ul className={styles.position_bullets}>
-                                <li>
-                                    New backoffice & management applications
-                                    <em>architecture / development</em>
-                                </li>
-                                <li>
-                                    Internal component library based on AngularJS.
-                                    <em>architecture / development</em>
-                                </li>
-                                <li>
-                                    Automatic updater for Windows based apps.
-                                    <em>development</em>
+                                    <br />
+                                    Mentored several programmers.
                                 </li>
                             </ul>
                         </div>
@@ -163,16 +143,17 @@ export class ExperienceSection extends React.Component {
                             <span className={styles.position_techs_item}>NewRelic</span>
                             <span className={styles.position_techs_item}>JIRA</span>
                         </div>
-                    </ExperienceCompany>
+                    </div>
 
-                    <ExperienceCompany name="Kapella Sp. z o.o.">
+                    <div className={styles.block}>
+                        <CompanyHeader name="Kapella Sp. z o.o." />
                         <div className={styles.position}>
                             <h3 className={styles.position_title}>.NET developer</h3>
-                            <p>October 2014 — September 2015</p>
+                            <h4 className={styles.position_company}>Kapella Sp. z o.o.</h4>
+                            <p className={styles.position_time}>October 2014 — September 2015</p>
 
                             <ul className={styles.position_bullets}>
                                 <li>Developing an industrial light management system.</li>
-                                <li>Standalone C# server with WPF client.</li>
                             </ul>
                         </div>
 
@@ -183,12 +164,14 @@ export class ExperienceSection extends React.Component {
                             <span className={styles.position_techs_item}>JavaScript</span>
                             <span className={styles.position_techs_item}>AngularJS</span>
                         </div>
-                    </ExperienceCompany>
+                    </div>
 
-                    <ExperienceCompany name="Eurotronic" url="eurotronic.net.pl">
+                    <div className={styles.block}>
+                        <CompanyHeader name="Eurotronic" url="eurotronic.net.pl" />
                         <div className={styles.position}>
                             <h3 className={styles.position_title}>.NET developer</h3>
-                            <p>October 2013 — September 2014</p>
+                            <h4 className={styles.position_company}>Eurotronic</h4>
+                            <p className={styles.position_time}>October 2013 — September 2014</p>
 
                             <ul className={styles.position_bullets}>
                                 <li>Working on proprietary building management system.</li>
@@ -200,12 +183,14 @@ export class ExperienceSection extends React.Component {
                                 <span className={styles.position_techs_item}>WPF</span>
                             </div>
                         </div>
-                    </ExperienceCompany>
+                    </div>
 
-                    <ExperienceCompany name="Emerson Process Management" url="www.emerson.com">
+                    <div className={styles.block}>
+                        <CompanyHeader name="Emerson Process Management" url="www.emerson.com" />
                         <div className={styles.position}>
                             <h3 className={styles.position_title}>.NET developer intern</h3>
-                            <p>July 2013 — September 2013</p>
+                            <h4 className={styles.position_company}>Emerson Process Management</h4>
+                            <p className={styles.position_time}>July 2013 — September 2013</p>
                             <ul className={styles.position_bullets}>
                                 <li>Building web-based reporting system for power plants.</li>
                             </ul>
@@ -215,34 +200,27 @@ export class ExperienceSection extends React.Component {
                             <span className={styles.position_techs_item}>C#</span>
                             <span className={styles.position_techs_item}>ASP.NET MVC</span>
                         </div>
-                    </ExperienceCompany>
+                    </div>
                 </div>
 
                 <h2 className={styles.section_title}>Education</h2>
 
-                <div className={styles.container}>
-                    <ExperienceCompany name="Warsaw University of Technology">
-                        <div className={styles.printSpacer}></div>
+                <div className={styles.education}>
+                    <h2 className={styles.education_header}>Warsaw University of Technology</h2>
 
-                        <div className={styles.position}>
-                            <div className={styles.header}>
-                                <h3 className={styles.position_title}>
-                                    Master's degree in automation
-                                </h3>
-                                <p>2013 — 2014</p>
-                            </div>
-                        </div>
+                    <h3 className={styles.education_degree}>
+                        Master's degree in automation - 2014
+                    </h3>
 
-                        <div className={styles.position}>
-                            <div className={styles.header}>
-                                <h3 className={styles.position_title}>
-                                    Bachelor's degree in automation
-                                </h3>
-                                <p>2009 — 2013</p>
-                            </div>
-                        </div>
-                    </ExperienceCompany>
+                    <h3 className={styles.education_degree}>
+                        Bachelor's degree in automation - 2013
+                    </h3>
                 </div>
+
+                <a href="mailto:m.kedrzynski@gmail.com" className={styles.contact}>
+                    <img src={MailIcon} />
+                    m.kedrzynski@gmail.com
+                </a>
             </Section>
         );
     }

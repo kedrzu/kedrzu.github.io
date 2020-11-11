@@ -1,34 +1,5 @@
 @import '../styles/common.scss';
 
-.company {
-    background: $color-white;
-    padding: $spacing-6 $spacing-4;
-    color: $color-black;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: $spacing-8;
-
-    &:last-child {
-        margin-bottom: 0 !important;
-    }
-
-    @include media-breakpoint-up(md) {
-        padding: $spacing-6;
-    }
-
-    @include media-breakpoint-up(lg) {
-        padding: $spacing-8;
-        margin-bottom: $spacing-10;
-    }
-
-    @media print {
-        margin-bottom: $spacing-6;
-        padding: 0;
-        page-break-inside: avoid;
-        background: none;
-    }
-}
-
 .header {
     display: flex;
     flex-direction: column;
@@ -44,14 +15,7 @@
     }
 
     @media print {
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        margin-top: $spacing-3;
-        padding-bottom: 0;
-        margin-bottom: 0;
-        border-bottom: none;
-        page-break-inside: avoid;
+        display: none;
     }
 }
 
@@ -136,16 +100,5 @@
             margin-top: 0;
             border: none;
         }
-    }
-}
-
-.content {
-    display: flex;
-    flex-direction: column;
-}
-
-.noprint {
-    @media print {
-        display: none;
     }
 }

@@ -4,16 +4,21 @@
     display: grid;
     grid-template-rows: auto auto auto;
     grid-template-columns: auto 1fr;
+
+    @media print {
+        margin-bottom: $spacing-7;
+    }
 }
 
 .photo {
     grid-column: 1;
     grid-row: 1 / span 3;
 
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
     margin-right: $spacing-8;
+    align-self: center;
 
     @media screen {
         @include media-breakpoint-down(md) {
@@ -25,9 +30,9 @@
     }
 
     @media print {
-        width: 150px;
-        height: 150px;
-        margin-right: $spacing-6;
+        width: 200px;
+        height: 200px;
+        margin-right: $spacing-7;
     }
 }
 
@@ -153,7 +158,7 @@
     }
 
     @media print {
-        font-size: $font-size-3;
+        font-size: $font-size-2;
         max-width: unset;
     }
 

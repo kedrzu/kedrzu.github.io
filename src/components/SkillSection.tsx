@@ -4,6 +4,7 @@ import styles from './SkillSection.module.scss';
 import { Skill } from './Skill';
 import { Section } from './Section';
 import { Profile } from './Profile';
+import { skill } from './Skill.module.scss';
 
 export const SkillSection: React.FunctionComponent = () => {
     return (
@@ -37,11 +38,15 @@ export const SkillSection: React.FunctionComponent = () => {
                         <h3 className={styles.skillsTitle}>Backend</h3>
 
                         <Skill skill={4}>C# (4.0 - 8.0)</Skill>
+                        <Skill skill={4}>.NET (4.0+)</Skill>
                         <Skill skill={4}>ASP.NET MVC </Skill>
                         <Skill skill={4}>ASP.NET Web API</Skill>
                         <Skill skill={4}>ASP.NET Core</Skill>
                         <Skill skill={4}>OData</Skill>
+                        <Skill skill={3}>NHibernate</Skill>
                         <Skill skill={3}>SQL Server</Skill>
+                        <Skill skill={3}>EF</Skill>
+                        <Skill skill={3}>EF Core</Skill>
                         <Skill skill={1}>MySQL</Skill>
                         <Skill skill={1}>PostgreSQL</Skill>
                     </div>
@@ -60,10 +65,14 @@ export const SkillSection: React.FunctionComponent = () => {
                         <Skill>Visual Studio</Skill>
                         <Skill>Visual Studio Code</Skill>
                         <Skill>Kibana</Skill>
+                        <Skill>TeamCity</Skill>
                         <Skill>Sentry</Skill>
+                        <Skill>NodeJS</Skill>
                         <Skill>TSLint</Skill>
                         <Skill>ESLint</Skill>
                         <Skill>StyleLint</Skill>
+                        <Skill>Gulp</Skill>
+                        <Skill>Prismic</Skill>
                     </div>
                 </div>
             </div>
