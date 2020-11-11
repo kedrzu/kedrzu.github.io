@@ -14,7 +14,7 @@ export function Heading() {
             <Typing
                 className={styles.title}
                 hideCursor={true}
-                speed={10}
+                speed={20}
                 onFinishedTyping={() => setTimeout(() => setComplete(true), 500)}
             >
                 <p className={styles.title__hello}>
@@ -26,7 +26,7 @@ export function Heading() {
                     my name is <span className={styles.title__name}>Michał</span>.
                 </p>
                 <Typing.Delay ms={400} />
-                <Typing.Speed ms={2} />
+                <Typing.Speed ms={10} />
                 <p className={styles.title__subtitle}>
                     I'm senior fullstack developer from{' '}
                     <span className={styles.title__poland}>Poland</span>.
