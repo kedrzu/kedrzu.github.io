@@ -39,7 +39,7 @@ export const Profile: React.FunctionComponent = () => {
 
             <div className={styles.description}>
                 <p>
-                    I'm creative full stack developer with 7+ years of professional experience in
+                    I'm a creative full stack developer with 7+ years of professional experience in
                     back-end and front-end development and 3+ years of experience as a team lead and
                     architect of enterprise SaaS solution with worldwide reach.
                 </p>

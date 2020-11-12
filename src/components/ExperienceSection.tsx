@@ -34,7 +34,7 @@ export class ExperienceSection extends React.Component {
                                     brand.
                                 </li>
                                 <li>
-                                    Modern VueJS progressive ecommerce application with headless
+                                    Modern VueJS progressive e-commerce application with headless
                                     Magento as a backend.
                                     <br /> Written from scratch, fully in TypeScript with ESLint.
                                 </li>
@@ -87,11 +87,11 @@ export class ExperienceSection extends React.Component {
 
                             <ul className={styles.position_bullets}>
                                 <li>
-                                    Working in international team (all continents) spread across
+                                    Working in an international team (all continents) spread across
                                     multiple timezones (up to 10h delay).
                                 </li>
                                 <li>
-                                    Created internal component library designed to allow backend
+                                    Created an internal component library designed to allow backend
                                     developers to easily create views. <br />
                                     This allowed for 2 or 3 developers to handle the whole company
                                     frontend for several years. <br />
@@ -113,7 +113,7 @@ export class ExperienceSection extends React.Component {
                                     mostly regarding training & facility booking.
                                 </li>
                                 <li>
-                                    Led a long and diffucult migration of the whole system from
+                                    Led a long and difficult migration of the whole system from
                                     single timezone to multiple timezone support.
                                 </li>
                                 <li>
