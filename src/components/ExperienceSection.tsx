@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import PerfectGymLogo from '../assets/perfectgym-logo.svg';
 import HealthlabsLogo from '../assets/healthlabs-logo.svg';
-import MailIcon from '../assets/icons/mail.svg';
+import MailIcon from '../assets/icons/gmail.svg';
 
 import { CompanyHeader } from './CompanyHeader';
 import styles from './ExperienceSection.module.scss';

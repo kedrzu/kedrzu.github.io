@@ -2,8 +2,9 @@ import * as React from 'react';
 
 import Photo from '../assets/photo.jpg';
 import GithubIcon from '../assets/icons/github.svg';
-import MailIcon from '../assets/icons/mail.svg';
+import MailIcon from '../assets/icons/gmail.svg';
 import LinkedInIcon from '../assets/icons/linkedin.svg';
+import PolandIcon from '../assets/icons/poland.svg';
 
 import styles from './Profile.module.scss';
 
@@ -12,12 +13,14 @@ export const Profile: React.FunctionComponent = () => {
         <div className={styles.profile}>
             <img src={Photo} className={styles.photo} />
 
-            <h2 className={styles.name}>Michał Kędrzyński</h2>
+            <h2 className={styles.name}>
+                Michał Kędrzyński <img src={PolandIcon} />
+            </h2>
 
             <div className={styles.contacts}>
                 <a className={styles.contacts_contact} href="mailto:m.kedrzynski@gmail.com">
                     <img src={MailIcon} className={styles.contacts_contact_icon} />
-                    &nbsp;m.kedrzynski@gmail.com
+                    m.kedrzynski@gmail.com
                 </a>
                 <a
                     className={styles.contacts_contact}
@@ -25,7 +28,7 @@ export const Profile: React.FunctionComponent = () => {
                     target="_blank"
                 >
                     <img src={GithubIcon} className={styles.contacts_contact_icon} />
-                    &nbsp;kedrzu
+                    kedrzu
                 </a>
                 <a
                     className={styles.contacts_contact}
@@ -33,7 +36,7 @@ export const Profile: React.FunctionComponent = () => {
                     target="_blank"
                 >
                     <img src={LinkedInIcon} className={styles.contacts_contact_icon} />
-                    &nbsp;michalkedrzynski
+                    michalkedrzynski
                 </a>
             </div>
 
@@ -41,7 +44,7 @@ export const Profile: React.FunctionComponent = () => {
                 <p>
                     I'm a creative full stack developer with 7+ years of professional experience in
                     back-end and front-end development and 3+ years of experience as a team lead and
-                    architect of enterprise SaaS solution with worldwide reach.
+                    architect in enterprise SaaS solution with worldwide reach.
                 </p>
                 <p>
                     I'm also obsessed with UX/UI & product design and have a strong experience

@@ -20,12 +20,12 @@ export const SkillSection: React.FunctionComponent = () => {
                         <Skill skill={4}>JavaScript (ES5 - ES2020)</Skill>
                         <Skill skill={4}>TypeScript</Skill>
                         <Skill skill={4}>VueJS (2 - 3)</Skill>
-                        <Skill skill={4}>AngularJS</Skill>
                         <Skill skill={4}>CSS</Skill>
                         <Skill skill={4}>SCSS</Skill>
                         <Skill skill={4}>LESS</Skill>
                         <Skill skill={4}>Webpack</Skill>
                         <Skill skill={4}>NuxtJS</Skill>
+                        <Skill skill={4}>AngularJS</Skill>
                         <Skill skill={3}>UX design</Skill>
                         <Skill skill={2}>UI design</Skill>
                         <Skill skill={2}>GraphQL</Skill>

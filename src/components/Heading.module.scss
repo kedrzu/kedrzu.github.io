@@ -47,7 +47,7 @@
     }
 
     &__name {
-        color: $color-red;
+        color: $color-red-2;
     }
 
     &__subtitle {
@@ -61,7 +61,7 @@
     }
 
     &__poland {
-        background: linear-gradient(0deg, $color-red 47%, $color-white 47%);
+        background: linear-gradient(0deg, $color-red-2 47%, $color-white 47%);
         background-clip: text;
         -webkit-background-clip: text;
         color: transparent;
