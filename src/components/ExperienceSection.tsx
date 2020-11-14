@@ -100,7 +100,7 @@ export class ExperienceSection extends React.Component {
                                 <li>
                                     Architect of most of the applications currently in use by the
                                     company, including management app, client portal, internal
-                                    backoffice app, and public API. All of them was rewritten from
+                                    backoffice app, and public API. All of them were rewritten from
                                     old ones.
                                 </li>
                                 <li>Company's lead front-end developer & architect.</li>

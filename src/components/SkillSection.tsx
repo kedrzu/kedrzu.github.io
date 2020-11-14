@@ -70,6 +70,7 @@ export const SkillSection: React.FunctionComponent = () => {
                         <Skill>NodeJS</Skill>
                         <Skill>TSLint</Skill>
                         <Skill>ESLint</Skill>
+                        <Skill>D3</Skill>
                         <Skill>StyleLint</Skill>
                         <Skill>Gulp</Skill>
                         <Skill>Prismic</Skill>
