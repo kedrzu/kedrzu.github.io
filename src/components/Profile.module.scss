@@ -66,8 +66,9 @@
     }
 
     img {
-        margin-left: $spacing-3;
-        width: 20px;
+        margin-left: 0.5em;
+        width: 0.8em;
+        height: 0.8em;
     }
 }
 
@@ -122,17 +123,24 @@
 
         &_icon {
             $size: 20px;
-            width: $size + $padding;
-            height: $size + 2 * $padding;
-            padding: $padding $padding $padding 0;
+            width: $size;
+            height: $size;
+            margin: $padding $padding $padding 0;
+
+            @media print {
+                $size: 16px;
+                width: $size;
+                height: $size;
+                margin-right: 6px;
+            }
         }
 
         @media print {
             margin-bottom: 0;
             padding-left: 0;
             border: none;
-            font-size: $font-size-3;
-            margin-right: $spacing-6;
+            font-size: $font-size-2;
+            margin-right: $spacing-4;
             color: $color-red-1;
         }
 

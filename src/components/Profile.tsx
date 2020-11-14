@@ -4,6 +4,7 @@ import Photo from '../assets/photo.jpg';
 import GithubIcon from '../assets/icons/github.svg';
 import MailIcon from '../assets/icons/gmail.svg';
 import LinkedInIcon from '../assets/icons/linkedin.svg';
+import StackOverflowIcon from '../assets/icons/stack-overflow.svg';
 import PolandIcon from '../assets/icons/poland.svg';
 
 import styles from './Profile.module.scss';
@@ -22,6 +23,7 @@ export const Profile: React.FunctionComponent = () => {
                     <img src={MailIcon} className={styles.contacts_contact_icon} />
                     m.kedrzynski@gmail.com
                 </a>
+                {/* Github */}
                 <a
                     className={styles.contacts_contact}
                     href="https://github.com/kedrzu"
@@ -30,6 +32,7 @@ export const Profile: React.FunctionComponent = () => {
                     <img src={GithubIcon} className={styles.contacts_contact_icon} />
                     kedrzu
                 </a>
+                {/* Linked in */}
                 <a
                     className={styles.contacts_contact}
                     href="https://www.linkedin.com/in/michalkedrzynski/"
@@ -37,6 +40,15 @@ export const Profile: React.FunctionComponent = () => {
                 >
                     <img src={LinkedInIcon} className={styles.contacts_contact_icon} />
                     michalkedrzynski
+                </a>
+                {/* Stack overtfow */}
+                <a
+                    className={styles.contacts_contact}
+                    href="https://stackoverflow.com/users/2202583"
+                    target="_blank"
+                >
+                    <img src={StackOverflowIcon} className={styles.contacts_contact_icon} />
+                    2202583
                 </a>
             </div>
 
