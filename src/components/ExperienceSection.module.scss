@@ -23,7 +23,6 @@
 
     &_title {
         @include font-title;
-        flex: 0 0 100%;
         margin-bottom: $spacing-2;
         font-size: $font-size-9;
         position: sticky;
@@ -46,6 +45,18 @@
     }
 }
 
+.subsection {
+    display: flex;
+    flex-direction: column;
+
+    @media screen {
+        @include media-breakpoint-up(lg) {
+            flex-direction: row;
+            align-items: flex-start;
+        }
+    }
+}
+
 .container {
     display: flex;
     flex-direction: column;
@@ -56,12 +67,10 @@
     margin-bottom: $spacing-6;
 
     @include media-breakpoint-up(lg) {
-        margin-top: $spacing-10;
+        margin-top: 0;
         margin-bottom: $spacing-10;
-    }
-
-    &:last-child {
-        margin-bottom: 0 !important;
+        margin-left: auto;
+        flex: 0 0 58vw;
     }
 
     @media print {
@@ -106,8 +115,6 @@
 }
 
 .position {
-    max-width: 700px;
-
     @media print {
         max-width: none;
     }
@@ -202,21 +209,19 @@
         }
 
         &_item {
-            border: 2px solid $color-blue-1;
             margin-top: $spacing-3;
             margin-right: $spacing-3;
-            line-height: 30px;
-            padding: 0 $spacing-2;
+            line-height: 36px;
+            padding: 0 $spacing-3;
             font-size: $font-size-2;
+            background: $color-gray-6;
+            border-radius: 4px;
 
             @media print {
                 line-height: 25px;
                 padding: 0 $spacing-2;
                 margin-top: $spacing-1;
                 margin-right: $spacing-1;
-                border: none;
-                background: $color-gray-6;
-                border-radius: 4px;
             }
         }
     }
@@ -281,9 +286,6 @@
         margin-right: $spacing-2;
         width: 20px;
         height: 20px;
-        @media screen {
-            filter: invert(1);
-        }
     }
 
     @media print {

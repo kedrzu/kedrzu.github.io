@@ -47,8 +47,8 @@ export const SkillSection: React.FunctionComponent = () => {
                         <Skill skill={3}>SQL Server</Skill>
                         <Skill skill={3}>EF</Skill>
                         <Skill skill={3}>EF Core</Skill>
-                        <Skill skill={1}>MySQL</Skill>
-                        <Skill skill={1}>PostgreSQL</Skill>
+                        <Skill skill={2}>MySQL</Skill>
+                        <Skill skill={2}>PostgreSQL</Skill>
                     </div>
                 </div>
 

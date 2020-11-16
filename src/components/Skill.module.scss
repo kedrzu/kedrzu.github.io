@@ -1,24 +1,23 @@
 @import '../styles/common.scss';
 
 .skill {
-    border: 3px solid $color-blue-1;
     margin-top: $spacing-3;
     margin-right: $spacing-3;
     display: flex;
     box-sizing: content-box;
     display: flex;
     flex-direction: column;
-    padding: $spacing-2 $spacing-3;
+    padding: $spacing-3;
     justify-content: center;
     z-index: 1;
+    border-radius: 4px;
+    background: $color-gray-6;
 
     @media print {
         padding: $spacing-2;
         margin-top: $spacing-2;
         margin-right: $spacing-2;
         border: none;
-        background: $color-gray-6;
-        border-radius: 4px;
     }
 }
 

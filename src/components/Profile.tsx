@@ -28,6 +28,7 @@ export const Profile: React.FunctionComponent = () => {
                     className={styles.contacts_contact}
                     href="https://github.com/kedrzu"
                     target="_blank"
+                    rel="noopener noreferrer"
                 >
                     <img src={GithubIcon} className={styles.contacts_contact_icon} />
                     kedrzu
@@ -37,6 +38,7 @@ export const Profile: React.FunctionComponent = () => {
                     className={styles.contacts_contact}
                     href="https://www.linkedin.com/in/michalkedrzynski/"
                     target="_blank"
+                    rel="noopener noreferrer"
                 >
                     <img src={LinkedInIcon} className={styles.contacts_contact_icon} />
                     michalkedrzynski
@@ -46,6 +48,7 @@ export const Profile: React.FunctionComponent = () => {
                     className={styles.contacts_contact}
                     href="https://stackoverflow.com/users/2202583"
                     target="_blank"
+                    rel="noopener noreferrer"
                 >
                     <img src={StackOverflowIcon} className={styles.contacts_contact_icon} />
                     2202583
@@ -60,7 +63,7 @@ export const Profile: React.FunctionComponent = () => {
                 </p>
                 <p>
                     I'm also obsessed with UX/UI & product design and have a strong experience
-                    working along with designers to deliver holistic solutions.
+                    working along with designers to deliver holistic end-to-end solutions.
                 </p>
             </div>
         </div>

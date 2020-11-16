@@ -5,7 +5,7 @@
     flex-direction: column;
     padding-bottom: $spacing-6;
     margin-bottom: $spacing-5;
-    border-bottom: 2px solid $color-black;
+    border-bottom: 1px solid $color-gray-4;
     flex: 0 0 auto;
 
     @include media-breakpoint-up(md) {
@@ -68,7 +68,8 @@
     &_contact {
         margin-left: $spacing-3;
         margin-top: $spacing-3;
-        border: 1px solid $color-blue-3;
+        border: 1px solid $color-gray-4;
+        border-radius: 4px;
         padding: $spacing-2;
         font-size: $font-size-2;
         text-decoration: none;

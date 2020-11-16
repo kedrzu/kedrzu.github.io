@@ -64,10 +64,7 @@
 
     @include media-breakpoint-up(lg) {
         padding: 0 vw($spacing-6, lg) vw($spacing-6, lg) 0;
-
-        &:not(:last-child) {
-            flex: 0 0 50%;
-        }
+        flex: 0 0 50%;
     }
 
     @media print {

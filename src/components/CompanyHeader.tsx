@@ -1,4 +1,3 @@
-import classNames from 'classnames';
 import * as React from 'react';
 
 import GithubIcon from '../assets/icons/github.svg';
@@ -34,6 +33,7 @@ export class CompanyHeader extends React.Component<Props> {
                     className={styles.contacts_contact}
                     href={'https://' + this.props.url}
                     target="_blank"
+                    rel="noopener noreferrer"
                 >
                     <img src={LinkIcon} className={styles.contacts_contact_icon} />
                     &nbsp;{this.props.url}
@@ -43,7 +43,12 @@ export class CompanyHeader extends React.Component<Props> {
 
         if (this.props.github) {
             githubLink = (
-                <a className={styles.contacts_contact} href={this.props.github} target="_blank">
+                <a
+                    className={styles.contacts_contact}
+                    href={this.props.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
                     <img src={GithubIcon} className={styles.contacts_contact_icon} />
                 </a>
             );
@@ -51,7 +56,12 @@ export class CompanyHeader extends React.Component<Props> {
 
         if (this.props.linkedin) {
             linkedInLink = (
-                <a className={styles.contacts_contact} href={this.props.linkedin} target="_blank">
+                <a
+                    className={styles.contacts_contact}
+                    href={this.props.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
                     <img src={LinkedInIcon} className={styles.contacts_contact_icon} />
                 </a>
             );
